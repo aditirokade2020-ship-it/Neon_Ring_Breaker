@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Neon Ring Breaker</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<div class="scr on" id="menu"><h1>NEON RING BREAKER</h1><small>Smash the rings. Steer every ball on its own.</small>
+<div class="row" style="margin:16px"><button class="b mode on" data-m="classic">Classic</button><button class="b mode" data-m="challenge">Challenge</button><button class="b mode" data-m="endless">Endless</button></div>
+<button class="b big" id="play">▶ Play</button><button class="b big" onclick="go('lv')">Levels</button><button class="b big" onclick="openShop()">Shop</button><button class="b big" onclick="go('set')">Settings</button>
+<p id="mi" style="max-width:420px;text-align:center;opacity:.8"></p><div id="mc"></div></div>
+
+<div class="scr" id="lv"><h2>Select Level</h2><div class="row"><b id="lvc"></b><button class="b" onclick="go('menu')">Back</button></div><div class="grid" id="lvg"></div></div>
+
+<div class="scr" id="shop"><h2>Special Features Shop</h2><div class="row"><b id="shc"></b><button class="b" onclick="go('menu')">Back</button></div><div class="grid" id="shg"></div></div>
+
+<div class="scr" id="set"><h2>Settings</h2><div class="row"><button class="b big" id="mute"></button></div><div class="row"><button class="b big" id="rst">Reset progress</button><button class="b big" onclick="go('menu')">Back</button></div></div>
+
+<div class="scr" id="game" style="padding:0 8px"><div id="hud"></div>
+<div id="wrap"><canvas id="cv"></canvas></div><div id="abs"></div><div id="panel"></div></div>
+
+<div class="ov" id="pause"><div class="pn"><h2>Paused</h2><div class="row"><button class="b big" onclick="G.paused=false;$('#pause').classList.remove('on')">Resume</button><button class="b big" onclick="startGame(G.mode,G.level)">Restart</button><button class="b big" onclick="quit()">Quit</button></div></div></div>
+<div class="ov" id="res"><div class="pn" id="rb"></div></div>
+
+<script src="script.js"></script></body></html>
